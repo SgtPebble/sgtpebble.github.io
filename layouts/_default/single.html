@@ -1,0 +1,14 @@
+{{ define "header" }}
+	{{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+	<section id="content" class="{{ .Params.class }}">
+		<div class="content">
+			{{ .Content }}
+		</div>
+	</section>
+	{{ if .Params.gallery }}
+		{{ partial .Params.gallery . }}
+	{{ end }}
+{{ end }}

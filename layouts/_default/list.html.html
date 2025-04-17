@@ -1,0 +1,6 @@
+{{ define "main" }}
+	{{ partial "banner" . }}
+	{{ range .Pages }}
+		{{ partial "spotlight" . }}
+	{{ end }}
+{{ end }}

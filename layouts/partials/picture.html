@@ -1,0 +1,17 @@
+<picture>
+	{{ $_img := . }}
+	{{ $_imgw := .Width }}
+	{{ $_imgh := .Height }}
+	{{ range slice 1 0.71 0.5 0.35 0.25 }}
+		{{ $imgw := ( mul $_imgw (index .) | math.Floor ) }}
+		{{ $imgh := ( mul $_imgh (index .) | math.Floor ) }}
+		{{ $vwp := ( mul $_imgw (index .) | math.Floor ) }}
+		{{ $vwl := ( mul $vwp 2 ) }}
+		{{ $size := ( print $imgw "x" $imgh) }}
+		{{  $fillargs := print $size " webp q100" }}
+		{{ $resized := $_img.Resize $fillargs }}
+		<source media="(min-width: {{ $vwl }}px) and (orientation:landscape)" srcset="{{ $resized.RelPermalink }}" >
+		<source media="(min-width: {{ $vwp }}px) and (orientation:portrait)" srcset="{{ $resized.RelPermalink }}" >
+		{{ end }}
+	<img src="{{ .RelPermalink }}" alt="{{ .Params.alt }}">
+</picture>

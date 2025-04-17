@@ -1,0 +1,2 @@
+baseURL = 'http://dev.actions.beno.de/'
+publishDir = 'public/de.beno.actions.dev/'

@@ -1,0 +1,25 @@
+<!-- Footer -->
+<footer class="wrapper style1 invert align-center {{ if .IsHome }} {{ end }}">
+    <div class="inner">
+        <ul class="footer">
+            <li>
+                Benno Kieselstein<br>
+                Hamelner Straße 44<br>
+                28215 Bremen<br>
+                <a href="tel:+491637318663">+49 163 7318663</a><br>
+                <a href="mailto:kontakt@beno.de?subject=Mail von der Webseite&body=Was ich Ihnen schon immer sagen wollte …">kontakt@beno.de</a><br>
+            </li>
+            <li>
+                <a href="/">{{ .Site.Title }} </a><br>
+                {{ $.Site.Params.version }} <br>
+                &copy;&nbsp;{{ .Site.Copyright }}<br>
+                <a href="/impressum">Impressum</a><br>
+            </li>
+        </ul>
+</div>
+</footer>
+
+<!-- FontAwesome JS -->
+{{ range .Site.Params.asset.fontawesome_js -}}
+    <script src="{{ . | absURL }}"></script>
+{{- end }}

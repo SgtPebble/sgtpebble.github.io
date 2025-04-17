@@ -1,0 +1,11 @@
+ul.footer {
+    display:flex;
+    flex-wrap:wrap;
+    column-gap: 4rem;
+    justify-content: space-between;
+    list-style-type: none;
+}
+ul.footer li {
+    margin-top: 1rem;
+    text-align:left;
+}

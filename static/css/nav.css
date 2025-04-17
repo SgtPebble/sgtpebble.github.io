@@ -1,0 +1,179 @@
+/* section#header */
+
+#header {
+	height:fit-content;
+	min-height:6rem;
+}
+
+/*  div.navbar  */
+
+#navbar {
+	background-color: var(--bkgcol);
+	display:block; 
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top:6rem;
+	max-height: 0;
+	overflow:hidden;
+	padding:0 2rem;
+	position:fixed;
+	transition: all .5s ease-out;
+	width:100%;
+	z-index: 10;
+
+}
+#navbar p {
+	font-weight: bold;
+	margin:0;
+	text-transform: uppercase;
+}
+
+/*  nav  */
+
+nav {
+	background-color:var(--bkgcol);
+	height:fit-content;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	max-height: fit-content;
+	overflow: hidden;
+	width:100%;
+}
+nav ul {
+	list-style: none;
+	padding:0;
+}
+nav li {
+	padding: 0;
+}
+nav a {
+	background-color:transparent;
+	border-radius:0.5rem;
+    color: var(--fontcol);
+	cursor:pointer;
+    display: block;
+	margin:0;
+    padding: .5rem 1rem;
+	text-decoration:none;
+	transition:background-color .5s ease-in;
+}
+nav a:hover {
+	background-color: var(--bkgcolhover);
+    color: var(--fontcolhover);
+}
+
+/*  nav.breadcrumb  */
+
+nav.breadcrumb li {
+	float:left;
+}
+nav.breadcrumb a {
+	padding-left: 0;
+	padding-right: 0;
+}
+nav.breadcrumb a:hover {
+	background-color: transparent;
+	color:var(--fontcol);
+	text-decoration: underline;
+}
+nav.breadcrumb a:before {
+	content: "/";
+}
+
+/*  Mobile-Menu Icon  */
+
+#side-menu + label.hamb {
+	box-shadow: none;
+    cursor: pointer;
+    float: right;
+    padding: 2.9rem;
+	position:static;
+}
+#side-menu + label::before  {
+	display:none;
+}
+.hamb-line {
+    background: var(--fontcol);
+    display: block;
+    height: .2rem;
+    position: relative;
+    width: 1.5rem;
+
+}
+.hamb-line::before,
+.hamb-line::after {
+    background: var(--fontcol);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: .5rem;
+}
+.hamb-line::after{
+    top: -.5rem;
+}
+
+/*  .side-menu:checked  */
+
+.side-menu:checked ~ #navbar {
+	max-height: 100%;
+	padding:2rem;
+	position: absolute;
+	transition: all .5s ease-out;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media screen and (min-width: 988px) {
+	#hamburger-container {
+		display:none;
+	}
+	#navbar {
+		background-color: transparent;
+		display:flex;
+		height:fit-content;
+		margin-top: 0;
+		max-height:fit-content;
+		min-height:fit-content;
+		padding:2rem;
+		position:relative;
+	}
+	#navbar p {
+		display:none;
+	}
+    nav {
+        background-color: transparent;
+		height:fit-content;
+		margin-top: 0;
+        max-height: none;
+        max-width: fit-content;
+	    position: relative;
+        top: 0;
+		width:50%;
+    }
+    nav li {
+        float: left;
+    }
+    nav a:hover {
+	    background-color: var(--bkgcolhover);
+        color: var(--fontcolhover);
+		transition:background-color .5s ease-in;
+    }
+    input[type="checkbox"] + .hamb {
+        display: none;
+    }
+}

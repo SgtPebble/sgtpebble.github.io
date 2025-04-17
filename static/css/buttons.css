@@ -1,0 +1,25 @@
+.buttonbar .button {
+    margin: 1rem;
+}
+.buttonbar {
+    display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+}
+@media screen and (min-width: 988px) {
+    .buttonbar.space-between {
+        justify-content: space-between;
+    }
+    .buttonbar.flex-end {
+        justify-content: flex-end;
+    }
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+	background-color: var(--bkgcolhover); 
+	box-shadow: none;
+	color: var(--fontcolhover) !important;
+}

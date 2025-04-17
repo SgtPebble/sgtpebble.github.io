@@ -1,0 +1,10 @@
+<section class="{{ .Params.class }}" {{ with .Title }} id="{{ . }}"{{ end }}>
+	<div class="content">
+		{{ .Content }}
+	</div>
+	{{ with .Resources.GetMatch .Params.img }}
+    <div class="image">
+		{{ partial "picture" . }}
+	</div>
+    {{ end }}
+</section>

@@ -1,0 +1,64 @@
+/*  section  */
+
+section {
+	clear: both;
+}
+
+/*  div.content  */
+
+div.content {
+	max-width: 45rem;
+	width: 100%;
+	margin: 0 auto;
+	padding:0 1rem;
+}
+@media screen and (min-width: 988px) {
+	div.content {
+		padding:0;
+	}
+}
+div.content blockquote,
+div.content ol,
+div.content p,
+div.content ul  {
+	font-size:1.3rem;
+	margin-bottom:1rem;
+}
+div.content h1,
+div.content h2,
+div.content h3,
+div.content h4,
+div.content h5,
+div.content h6 {
+	clear:both;
+}
+div.content blockquote {
+	padding: 0 0 0 1rem;
+}
+figure.qr-code{
+	width:8rem;
+}
+figure img {
+	height:auto;
+	width:100%;
+}
+p.description {
+	background:grey;
+	border-right:1px dotted white;
+	margin-bottom:1px;
+}
+
+.gallery.style1 > .inner {
+	width: 100%;
+}
+@media screen and (max-width: 736px) and (orientation: portrait) {
+	.spotlight.style1 div.content {
+		text-align: left !important;
+	}
+}
+ul {
+	padding-left:1.25rem;
+}
+ul li {
+	padding-left:0;
+}
