@@ -12,6 +12,9 @@ favicon = true
 [Params.asset]
   fontawesome_css = ["css/fontawesome-all.min.css"]
   fontawesome_js = ["js/fontawesome-all.min.js"]
+[module]
+  [[module.mount]]
+    path = 'themes/hugo-story'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
