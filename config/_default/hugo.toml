@@ -1,11 +1,11 @@
 languageCode = 'de-de'
-title = 'pages.beno.de'
+title = 'de.beno.pages'
 Params.description = 'Test-Website des Autors Benno Kieselstein'
 Params.author = 'Benno Kieselstein'
 Params.email = 'pages@beno.de'
 Params.version = 'Version 0.1.0, 2025-04-15'
 copyright = 'Benno Kieselstein 2025'
-theme = 'hugo-story/'
+theme = ['hugo-story']
 disableKinds = ["taxonomy"]
 sectionPagesMenu = "main"
 favicon = true
@@ -15,6 +15,3 @@ favicon = true
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
-[module]
-  [module.imports]
-    path = 'github.com/caressofsteel/hugo-story'
