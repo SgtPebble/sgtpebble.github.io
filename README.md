@@ -1,5 +1,11 @@
-# GitHub Actions
+# Dieses Repository ist archiviert
 
-Meine Variante der Obsidian Sandbox
+sgtpebble.github.io 
 
-Zum Erforschen von GitHub Actions
+- repo: https://github.com/SgtPebble/sgtpebble.github.io (archiviert)
+- sync: GitHub 
+- generator: HUGO on push
+- deploy: GitHub Actions on push
+- url: https://vercel-beno-de.vercel.app/
+
+Build-Job bricht ab, wohl aufgrund einer Fehlkonfiguration in HUGO
